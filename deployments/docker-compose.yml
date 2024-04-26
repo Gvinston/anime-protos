@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+  protos_go:
+    container_name: protos_go
+    build:
+      context: ../
+      dockerfile: ./build/go/Dockerfile
+    volumes:
+      - "../gen/go:/app/gen/go"
+    networks:
+      - my_network
+    restart: on-failure
+
+networks:
+  my_network:
+    driver: bridge

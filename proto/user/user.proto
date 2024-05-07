@@ -3,6 +3,9 @@
 // Версия ProtoBuf
 syntax = "proto3";
 
+import "annotations.proto";
+//import "google.golang.org/genproto/googleapis/api";
+
 // Текущий пакет - указывает пространство имен для сервиса и сообщений. Помогает избегать конфликтов имен.
 package auth;
 
@@ -14,7 +17,11 @@ service Auth {
   // Register registers a new user.
   rpc Register (RegisterRequest) returns (RegisterResponse);
   // Login logs in a user and returns an auth token.
-  rpc Login (LoginRequest) returns (LoginResponse);
+  rpc Login (LoginRequest) returns (LoginResponse) {
+    option (google.api.http) = {
+      get: "/v1/users/{user_id}"
+    };
+  };
 }
 
 // TODO: На будущее, следующий сервис можно описать прямо здесь,

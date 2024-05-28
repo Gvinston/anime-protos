@@ -1,6 +1,6 @@
 module github.com/Gvinston/anime-protos
 
-go 1.21.4
+go 1.19
 
 require (
 	google.golang.org/grpc v1.63.2

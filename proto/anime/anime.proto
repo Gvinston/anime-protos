@@ -1,0 +1,41 @@
+// proto/sso/sso.proto
+
+// Версия ProtoBuf
+syntax = "proto3";
+
+//import "annotations.proto";
+
+package auth;
+
+// Настройки для генерации Go кода.
+option go_package = "anime/v1";
+
+
+service Anime {
+
+  rpc Filter (FilterRequest) returns (FilterResponse);
+
+  rpc GetById (GetByIdRequest) returns (GetByIdResponse);
+}
+
+
+
+message FilterRequest {
+  string title = 1;
+}
+
+
+message FilterResponse {
+  int64 id = 1;
+  string title = 2;
+}
+
+
+message GetByIdRequest {
+  int64 id = 1;
+}
+
+message GetByIdResponse {
+  int64 id = 1;
+  string title = 2;
+}

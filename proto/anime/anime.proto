@@ -16,9 +16,10 @@ service Anime {
   rpc Filter (FilterRequest) returns (FilterResponse);
 
   rpc GetById (GetByIdRequest) returns (GetByIdResponse);
+
+  rpc Create (CreateRequest) returns (CreateResponse);
+
 }
-
-
 
 message FilterRequest {
   string title = 1;
@@ -28,6 +29,83 @@ message FilterRequest {
 message FilterResponse {
   int64 id = 1;
   string title = 2;
+}
+
+message CreateRequest {
+  uint64 id = 1;
+  uint64 kinopoisk_id = 2;
+  uint64 imdb_id = 3;
+  uint64 shikimori_id = 4;
+  string updated_at = 5;
+  string created_at = 6;
+  uint64 quality = 7;
+  string title = 8;
+  string title_en = 9;
+  string other_titles = 10;
+  string other_titles_en = 11;
+  string anime_licensed_by = 12;
+  string anime_kind = 13;
+  string anime_status = 14;
+  uint32 year = 15;
+  string tagline = 16;
+  string description = 17;
+  float lgbt = 18;
+  bool camrip = 19;
+  string worldart_link = 20;
+  string poster_url = 21;
+  uint32 duration = 22;
+  float kinopoisk_rating = 23;
+  uint32 kinopoisk_votes = 24;
+  float imdb_rating = 25;
+  uint32 imdb_votes = 26;
+  float shikimori_rating = 27;
+  uint32 shikimori_votes = 28;
+  string premiere_world = 29;
+  string aired_at = 30;
+  string released_at = 31;
+  string next_episode_at = 32;
+  string rating_mpaa = 33;
+  uint32 minimal_age = 34;
+  uint32 episodes_total = 35;
+  uint32 episodes_aired = 36;
+}
+
+message CreateResponse {
+  uint64 kinopoisk_id = 2;
+  uint64 imdb_id = 3;
+  uint64 shikimori_id = 4;
+  string updated_at = 5;
+  string created_at = 6;
+  uint64 quality = 7;
+  string title = 8;
+  string title_en = 9;
+  string other_titles = 10;
+  string other_titles_en = 11;
+  string anime_licensed_by = 12;
+  string anime_kind = 13;
+  string anime_status = 14;
+  uint32 year = 15;
+  string tagline = 16;
+  string description = 17;
+  float lgbt = 18;
+  bool camrip = 19;
+  string worldart_link = 20;
+  string poster_url = 21;
+  uint32 duration = 22;
+  float kinopoisk_rating = 23;
+  uint32 kinopoisk_votes = 24;
+  float imdb_rating = 25;
+  uint32 imdb_votes = 26;
+  float shikimori_rating = 27;
+  uint32 shikimori_votes = 28;
+  string premiere_world = 29;
+  string aired_at = 30;
+  string released_at = 31;
+  string next_episode_at = 32;
+  string rating_mpaa = 33;
+  uint32 minimal_age = 34;
+  uint32 episodes_total = 35;
+  uint32 episodes_aired = 36;
 }
 
 

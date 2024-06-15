@@ -32,7 +32,6 @@ message FilterResponse {
 }
 
 message CreateRequest {
-  uint64 id = 1;
   uint64 kinopoisk_id = 2;
   uint64 imdb_id = 3;
   uint64 shikimori_id = 4;
@@ -71,6 +70,7 @@ message CreateRequest {
 }
 
 message CreateResponse {
+  uint64 id = 1;
   uint64 kinopoisk_id = 2;
   uint64 imdb_id = 3;
   uint64 shikimori_id = 4;

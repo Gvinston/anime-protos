@@ -32,9 +32,9 @@ message FilterResponse {
 }
 
 message CreateRequest {
-  uint64 kinopoisk_id = 2;
-  uint64 imdb_id = 3;
-  uint64 shikimori_id = 4;
+  string kinopoisk_id = 2;
+  string imdb_id = 3;
+  string shikimori_id = 4;
   string updated_at = 5;
   string created_at = 6;
   string quality = 7;

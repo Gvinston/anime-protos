@@ -48,7 +48,7 @@ message CreateRequest {
   uint32 year = 15;
   string tagline = 16;
   string description = 17;
-  float lgbt = 18;
+  bool lgbt = 18;
   bool camrip = 19;
   string worldart_link = 20;
   string poster_url = 21;

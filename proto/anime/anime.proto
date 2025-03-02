@@ -37,7 +37,7 @@ message CreateRequest {
   uint64 shikimori_id = 4;
   string updated_at = 5;
   string created_at = 6;
-  uint64 quality = 7;
+  string quality = 7;
   string title = 8;
   string title_en = 9;
   string other_titles = 10;

@@ -67,6 +67,7 @@ message CreateRequest {
   uint32 minimal_age = 34;
   uint32 episodes_total = 35;
   uint32 episodes_aired = 36;
+  repeated string screenshots = 37;
 }
 
 message CreateResponse {
@@ -106,6 +107,7 @@ message CreateResponse {
   uint32 minimal_age = 34;
   uint32 episodes_total = 35;
   uint32 episodes_aired = 36;
+  repeated string screenshots = 37;
 }
 
 

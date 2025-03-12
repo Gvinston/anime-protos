@@ -72,12 +72,12 @@ message CreateRequest {
 
 message CreateResponse {
   uint64 id = 1;
-  uint64 kinopoisk_id = 2;
-  uint64 imdb_id = 3;
-  uint64 shikimori_id = 4;
+  string kinopoisk_id = 2;
+  string imdb_id = 3;
+  string shikimori_id = 4;
   string updated_at = 5;
   string created_at = 6;
-  uint64 quality = 7;
+  string quality = 7;
   string title = 8;
   string title_en = 9;
   string other_titles = 10;
@@ -88,7 +88,7 @@ message CreateResponse {
   uint32 year = 15;
   string tagline = 16;
   string description = 17;
-  float lgbt = 18;
+  bool lgbt = 18;
   bool camrip = 19;
   string worldart_link = 20;
   string poster_url = 21;
